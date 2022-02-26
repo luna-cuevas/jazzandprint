@@ -336,6 +336,7 @@ body .button {
 
 .navbar-right {
   display: flex;
+  z-index: 999999;
   width: 100%;
   margin: auto;
   justify-content: center;
@@ -370,7 +371,7 @@ body .button {
 .splide.is-initialized {
   margin: auto !important;
   display: flex !important;
-  flex-wrap: wrap !important;
+  flex-direction: column !important;
 }
 
 .splide__pagination {
@@ -384,8 +385,13 @@ body .button {
 .splide__slide img {
   margin: auto;
   display: flex;
-  width: 60vw;
-  height: auto;
+  max-width: 100vw;
+  max-height: 85vh;
+}
+
+#button1 {
+  display: flex;
+  justify-content: center;
 }
 
 .splide__arrow {
@@ -642,11 +648,56 @@ body .button {
   justify-content: center;
 }
 
+.calculator select {
+  font-size: 17px !important;
+  height: auto !important;
+  margin: 0 !important;
+  padding: 10px !important;
+}
+
+#cws_google_reviews {
+  width: 80%;
+  margin: auto;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 10px;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #222 !important;
+  background-color: white !important;
+  box-shadow: 0vw 0.6vw 2vw #a5a4a4;
+  position: relative;
+  overflow: hidden;
+  margin-bottom: 2em;
+  border-radius: 2em;
+}
+
+#cws_google_reviews #google-reviews .cwsinc-review-stars {
+  position: revert !important;
+  margin: 5px auto !important;
+}
+
+#cws_google_reviews #google-reviews .cwsinc-review-item {
+  padding: 10px !important;
+}
+
+#cws_google_reviews #powered_by_cws {
+  visibility: hidden !important;
+  position: absolute !important;
+}
+
+.alert {
+  display: none;
+  visibility: hidden;
+}
+
 @media screen and (max-width: 980px) {
   .hero-container {
     height: 55vh;
   }
   .navbar-right {
+    z-index: 9999999;
     display: block !important;
     margin: auto !important;
     position: absolute !important;
@@ -784,10 +835,6 @@ body .button {
 
   .splide__arrow {
     display: none !important;
-  }
-
-  .splide__slide img {
-    width: 80% !important;
   }
 
   .featured-products-infocard {
@@ -990,6 +1037,17 @@ body .button {
 
   ul.dropdown-menu.cart-dn {
     top: -444px;
+  }
+
+  .splide__slide img {
+    margin: auto;
+    display: flex;
+    width: 100vw;
+    height: auto;
+  }
+
+  #cws_google_reviews {
+    width: 90% !important;
   }
 }
 
